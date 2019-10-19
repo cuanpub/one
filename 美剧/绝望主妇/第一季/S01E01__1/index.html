@@ -278,8 +278,35 @@
                 <p><a href="../"><img src="/img/back.png" style="width:32px;height:32px;"></a><br><br></p>
 <!-- begin -->
 
-<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
+
+<div id='media' name='media'>
+<script>
+function setSticky(value)
+{
+    if (value)
+    {
+        document.getElementById("media").style.cssText="position: sticky;top:48px;position: -webkit-sticky;width: 100%;height: 0;padding-bottom: 99.25%"
+    }
+    else
+    {
+        document.getElementById("media").style.cssText="position: relative;position: -webkit-sticky;width: 100%;height: 0;padding-bottom: 56.25%"
+    }
+}
+
+if (CSS.supports("position", "sticky")||CSS.supports("position", "sticky"))
+{
+document.write('<div  style="z-index:99;  background-color: white;" align="right"><input align="right" type="checkbox" name="vehicle" value="Bike" onclick="setSticky(this.checked)">固定视频</div>')
+}
+else
+{
+alert('ddd')
+}
+
+</script>
+
+<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%">
 <iframe src="//player.bilibili.com/player.html?aid=71101011&cid=123190351&page=1" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
 </div>
 
 <p><br></p>
