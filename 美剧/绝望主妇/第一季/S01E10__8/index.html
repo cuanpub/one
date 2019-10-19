@@ -278,7 +278,28 @@
                 <p><a href="../"><img src="/img/back.png" style="width:32px;height:32px;"></a><br><br></p>
 <!-- begin -->
 
-<div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
+<script>
+function setSticky()
+{
+    if (document.getElementById("button_float").src.slice(-7)=="off.png")
+    {        
+        document.getElementById("media").style.cssText="position:sticky; position:-webkit-sticky; top:48px; width: 100%;height: 0;padding-bottom: 56.25%;"
+        document.getElementById("button_float").src="/img/on.png"
+    }
+    else
+    {
+        document.getElementById("media").style.cssText="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;"
+        document.getElementById("button_float").src="/img/off.png"
+    }
+}
+
+if (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky"))
+{
+    document.write('<div style="height:48px; position:sticky; position:-webkit-sticky; top:0px; z-index:99; background-color:white;" align="right"><img id="button_float" src="/img/off.png" width="70px" height="32px" onclick="setSticky()" style="vertical-align: middle;" /><span style="font-size:20px; color:OrangeRed; vertical-align: middle;">浮动显示视频</span></div>')
+}
+</script>
+
+<div id="media" style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
 <iframe src="//player.bilibili.com/player.html?aid=71101011&cid=123192832&page=87" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" frameborder="0" allowfullscreen></iframe>
 </div>
 
