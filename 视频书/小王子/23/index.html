@@ -278,6 +278,32 @@
                 <p><a href="../"><img src="/img/back.png" style="width:32px;height:32px;"></a><br><br></p>
 <!-- begin -->
 
+<script>
+function setSticky()
+{
+    if (document.getElementById("button_float").src.slice(-7)=="off.png")
+    {        
+        document.getElementById("media").style.cssText="position:sticky; position:-webkit-sticky; top:80px; width: 100%;height: 0;padding-bottom: 56.25%;z-index:1;"
+        document.getElementById("button_float").src="/img/on.png"
+    }
+    else
+    {
+        document.getElementById("media").style.cssText="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;z-index:1;"
+        document.getElementById("button_float").src="/img/off.png"
+    }
+}
+
+if (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky"))
+{
+    document.write('<div style="height:32px; position:sticky; position:-webkit-sticky; top:48px; z-index:2; background-color:white;" align="right"><img id="button_float" src="/img/off.png" width="70px" height="32px" onclick="setSticky()" style="vertical-align: middle;" /><span style="font-size:20px; color:OrangeRed; vertical-align: middle;">浮动显示视频</span></div>')
+}
+</script>
+
+<div id="media" style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;z-index:1;">
+<iframe src="//player.bilibili.com/player.html?aid=77639655&cid=132822473&page=23" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p><br></p>
 <!-- content -->
 
 <p><br></p>
@@ -286,7 +312,7 @@
 <font color="#800000" style="background-color: #800000"/>████</font>&nbsp;&nbsp;&nbsp;&nbsp;难点词汇<br>
 <font color="#0000FF" style="background-color: #0000FF"/>████</font>&nbsp;&nbsp;&nbsp;&nbsp;生僻词<br>
 <font color="#00BFFF" style="background-color: #00BFFF"/>████</font>&nbsp;&nbsp;&nbsp;&nbsp;词组 &amp; 惯用语<br>
-<br>[学习本文需要基础词汇量：<x-rating>4</x-rating>,000 ]<br>[本次分析采用基础词汇量：<x-rating2>4</x-rating2>,000 ]<br><p style="line-height: 150%">Chapter 23<br><br>Good morning, ” said the little prince. <br><br>Good morning, ” said the merchant. <br><br>This was a merchant who sold pills that had been invented to <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=quench"><span style="border-bottom:1px solid #800000;">quench</span></a></object> <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=thirst"><span style="border-bottom:1px solid #FF0000;">thirst</span></a></object>. You need only swallow one pill a week, and you would feel no need of anything to drink. <br><br>Why are you selling those? asked the little prince. <br><br>Because they save a tremendous amount of time, ” said the merchant. <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=computations"><span style="border-bottom:1px solid #FF0000;">Computations</span></a></object> have been made by experts. With these pills, you save fifty-three minutes in every week. <br><br>And what do I do with those fifty-three minutes? <br><br>Anything you like. . . <br><br>As for me, ” said the little prince to himself, “if I had fifty-three minutes to spend as I liked, I should walk <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=at my leisure"><span style="box-shadow: 0px 3px white, 0px 4px #00BFFF;">at my leisure</span></a></object> toward a spring of fresh water.  </p></p>
+<br>[学习本文需要基础词汇量：<x-rating>4</x-rating>,000 ]<br>[本次分析采用基础词汇量：<x-rating2>4</x-rating2>,000 ]<br><p style="line-height: 150%">Chapter 23 ↵ Good morning, ” said the little <br><br>prince.  ↵ Good morning, ” said the merchant.  ↵ <br><br>This was a merchant who sold pills that had been <br><br>invented to <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=quench"><span style="border-bottom:1px solid #800000;">quench</span></a></object> <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=thirst"><span style="border-bottom:1px solid #FF0000;">thirst</span></a></object>. You need only swallow <br><br>one pill a week, and you would feel no need of <br><br>anything to drink.  ↵ Why are you selling those? <br><br>asked the little prince.  ↵ Because they save a <br><br>tremendous amount of time, ” said the merchant. <br><br><object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=computations"><span style="border-bottom:1px solid #FF0000;">Computations</span></a></object> have been made by experts. With <br><br>these pills, you save fifty-three minutes in <br><br>every week.  ↵ And what do I do with those <br><br>fifty-three minutes?  ↵ Anything you like. . .  ↵ <br><br>As for me, ” said the little prince to himself, “<br><br>if I had fifty-three minutes to spend as I liked, <br><br>I should walk <object><a style="text-decoration:none;color:#000000" target="_blank" href="https://cn.bing.com/dict/search?q=at my leisure"><span style="box-shadow: 0px 3px white, 0px 4px #00BFFF;">at my leisure</span></a></object> toward a spring of <br><br>fresh water.  ↵</p></p>
 <!-- dict -->
 
 <p><br></p>
