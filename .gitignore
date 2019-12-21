@@ -6,3 +6,5 @@ media
 *.srt
 output*.*
 *.htm
+/sitemap.xml
+/sitemap.xml.gz
