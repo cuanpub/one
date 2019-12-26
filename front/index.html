@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<link href="./style.css" rel="stylesheet">
+<script>
+
+function onVideoChange()
+{
+    var file = document.getElementById('srcVideo').files[0];
+    var url = URL.createObjectURL(file);
+    document.getElementById("video").src = url;
+}
+
+function onTextChange()
+{
+    var file = document.getElementById('srcText').files[0];
+    var url = URL.createObjectURL(file);
+}
+
+function onPlay()
+{
+    document.getElementById("player").style.width = "100%";
+    alert("dfsdfa")
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+Video <input type="file" id="srcVideo" onchange="onVideoChange()">
+<br>
+Text <input type="file" id="srcText" onchange="onTextChange()">
+<br>
+<br>
+
+<div id="player" class="overlay">
+
+<video id="video" width="100%" width="100%">
+</video>
+
+</div>
+
+<button type="button" id="play" onclick="onPlay()">Play</button>
+
+</body>
+</html>
+
