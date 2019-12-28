@@ -1,125 +1,18 @@
 <html>
 
 <head>
-<link href="./screenfull.css" rel="stylesheet">
-<script src="./screenfull.min.js"></script>
-<script>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-function onVideoChange()
-{
-    var file = document.getElementById('srcVideo').files[0];
-    var url = URL.createObjectURL(file);
-    document.getElementById("video").src = url;
-}
+    <link href="./screenfull.css" rel="stylesheet">
+    <link href="./player.css" rel="stylesheet">
 
-function onTextChange()
-{
-    var file = document.getElementById('srcText').files[0];
+    <script src="http://code.jquery.com/jquery-1.4.1.js"></script>
 
-    var reader = new FileReader();
-    reader.onload = onLoadTips;
-    reader.readAsText(file);
-}
-
-function onPlay()
-{
-    player = document.getElementById('player');
-
-    oldTipContent=''
-
-    if (screenfull.isEnabled)
-    {
-        screenfull.request(player);
-    }
-
-    video = document.getElementById('video');
-    video.currentTime=60
-    video.play()
-
-}
-
-function onPause()
-{
-    video = document.getElementById('video');
-    video.pause()
-}
-
-function onLoadTips(e)
-{
-    content=e.target.result
-    
-    parts=content.split('\n\n')
-
-    tips=new Array()
-    for (i in parts)
-    {
-        item=parts[i]
-        lines=item.split('\n',3)
-        time=lines[1]
-        text=lines[2]
-
-        start=parseInt(time.slice(0,2))*60*60 + parseInt(time.slice(3,5))*60 + parseInt(time.slice(6,8)) + parseInt(time.slice(9,12))/1000.0
-        end=parseInt(time.slice(17,19))*60*60 + parseInt(time.slice(20,22))*60 + parseInt(time.slice(23,25)) + parseInt(time.slice(26,29))/1000.0
-
-        tip=new Array(start,end,text)
-        tips.push(tip)         
-    }
-
-
-}
-
-function getTip(currentTime)
-{
-    for (i in tips)
-    {
-        item=tips[i]
-        
-        if (currentTime>item[0] && currentTime<item[1])
-        {
-            return item[2]
-        }
-    }
-    return ""
-}
-
-
-function onTimeUpdate()
-{
-    video = document.getElementById('video');
-    tipContent=getTip(video.currentTime)
-
-
-
-    if (oldTipContent!=tipContent && tipContent!='')
-    {
-        video.pause()
-        setTimeout("video.play()",5000)
-    }
-
-
-    oldTipContent=tipContent
-
-
-
-    tip = document.getElementById('tip')
-    if (tip!='')
-    {
-        tip.innerHTML=tipContent
-        video = document.getElementById('video');
-        //video.pause()
-    }    
-    
-    xxx = document.getElementById('xxx')
-    xxx.value=video.currentTime
-    yyy = document.getElementById('yyy')
-    yyy.value=tipContent
-}
-
-
-</script>
-
+    <script src="./screenfull.min.js"></script>
+    <script src="./player.js"></script>
 </head>
-
 
 <body>
 
@@ -128,18 +21,15 @@ Video <input type="file" id="srcVideo" onchange="onVideoChange()">
 Text <input type="file" id="srcText" onchange="onTextChange()">
 <br>
 <br>
-<input type="button" id="xxx" value="ss">
-<input type="button" id="yyy" value="ss">
 
 
 <div id="player" style="position: relative;width: 640;height: 360;">
 
-<video id="video" ontimeupdate="onTimeUpdate()" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;">
-</video>
+  <video id="video" ontimeupdate="onTimeUpdate()" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color:black">
+  </video>
 
-<div id="tip" style="position: absolute;top: 0;left: 0;width: 100%;height: 80%;font-size: 32px;">
-asdfsdfaf
-</div>
+  <div id="tip" style="position: absolute;top: 5%;left: 5%;width: 90%;height: 80%;font-size: 60px;color:white;overflow:hidden;margin:0 auto;text-align:center">
+  </div>
 
 </div>
 
