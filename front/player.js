@@ -48,7 +48,7 @@ function onLoadTips(e)
         time=lines[1]
         text=lines.slice(2)
 
-        start=parseInt(time.slice(0,2))*60*60 + parseInt(time.slice(3,5))*60 + parseInt(time.slice(6,8)) + parseInt(time.slice(9,12))/1000.0
+        start=parseInt(time.slice(0,2))*60*60 + parseInt(time.slice(3,5))*60 + parseInt(time.slice(6,8)) + parseInt(time.slice(9,12))/1000.0+15
         //end=parseInt(time.slice(17,19))*60*60 + parseInt(time.slice(20,22))*60 + parseInt(time.slice(23,25)) + parseInt(time.slice(26,29))/1000.0
         end=start+1
 
