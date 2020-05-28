@@ -46,6 +46,12 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.982221ab.css">
       
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -95,7 +101,9 @@
 
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -248,8 +256,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" title="阅读" class="md-nav__link">
-    阅读
+  <a href="#_1" title="文本" class="md-nav__link">
+    文本
   </a>
   
 </li>
@@ -300,7 +308,7 @@ function setSticky()
 
 if (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-sticky"))
 {
-    document.write('<div style="height:32px; position:sticky; position:-webkit-sticky; top:48px; z-index:2; background-color:white;" align="right"><img id="button_float" src="/img/off.png" width="70px" height="32px" onclick="setSticky()" style="vertical-align: middle;" /><span style="font-size:20px; color:OrangeRed; vertical-align: middle;">浮动显示视频</span></div>')
+    document.write('<div style="height:32px; position:sticky; position:-webkit-sticky; top:48px; z-index:2; background-color:white;" align="right"><a style="font-size:18px; color:OrangeRed; vertical-align: middle;" href="#_1"> 文本🔵 </a>&nbsp;<a style="font-size:18px; color:OrangeRed; vertical-align: middle;" href="#_2"> 知识点🔴 </a>&nbsp;&nbsp;<img id="button_float" src="/img/off.png" width="70px" height="32px" onclick="setSticky()" style="vertical-align: middle;" /><span onclick="setSticky()" style="font-size:18px; color:OrangeRed; vertical-align: middle;">浮动显示视频</span></div>')
 }
 </script>
 
@@ -312,7 +320,7 @@ if (CSS.supports("position", "sticky") || CSS.supports("position", "-webkit-stic
 <!-- content -->
 
 <p><br></p>
-<h4 id="_1">阅读</h4>
+<h4 id="_1">文本</h4>
 <p><font color="#FF0000" style="background-color: #FF0000"/>████</font>&nbsp;&nbsp;&nbsp;&nbsp;重点词汇<br>
 <font color="#800000" style="background-color: #800000"/>████</font>&nbsp;&nbsp;&nbsp;&nbsp;难点词汇<br>
 <font color="#00BFFF" style="background-color: #00BFFF"/>████</font>&nbsp;&nbsp;&nbsp;&nbsp;词组 &amp; 惯用语<br>
